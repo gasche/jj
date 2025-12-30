@@ -50,6 +50,9 @@ use crate::ui::Ui;
 ///
 /// By default, the duplicated commits retain the descriptions of the originals.
 /// This can be customized with the `templates.duplicate_description` setting.
+///
+/// The new children can be accessed by the revset `latest(all(), 1)`.
+/// (See [`jj help -k revsets`].)
 #[derive(clap::Args, Clone, Debug)]
 pub(crate) struct DuplicateArgs {
     /// The revision(s) to duplicate (default: @) [aliases: -r]
